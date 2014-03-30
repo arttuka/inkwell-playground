@@ -5,7 +5,6 @@
 ;; This is the state that the sketch starts with. You can return the sketch to
 ;; this state by pressing F12. See handle-event for how it's done!
 (def initial-state {:alien {:position [100 100]
-                            :target [200 200]
                             :scale 1
                             :rotation 0}
                     :tick-count 0})
