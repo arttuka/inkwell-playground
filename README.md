@@ -1,6 +1,6 @@
 # inkwell-playground
 
-A sample project for playing with Inkwell.
+A sample project for playing with [Inkwell](https://github.com/solita/inkwell).
 
 ## Usage
 
