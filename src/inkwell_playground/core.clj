@@ -35,6 +35,7 @@
 ;; - resources/platformer
 ;; - resources/space-shooter
 ;; for more images by Kenney Vleugels (www.kenney.nl)
+(def bg-image (delay (load-image "space-shooter/background.jpg")))
 (def player-image (delay (load-image "platformer/character/front.png")))
 
 ;; draw is an impure function that takes a state, and calls Quil's drawing
