@@ -1,14 +1,17 @@
 (ns user
   (:require clojure.tools.namespace.repl
-            inkwell.core
-            inkwell-playground.core))
+            inkwell.core))
+
+(clojure.tools.namespace.repl/disable-unload!)
+(clojure.tools.namespace.repl/disable-reload!)
 
 (def sketch nil)
 (def state nil)
 
 (defn start! []
   (when-not sketch
-    (alter-var-root #'sketch (constantly (inkwell-playground.core/make-sketch!)))
+    (require 'inkwell-playground.core)
+    (alter-var-root #'sketch (constantly ((ns-resolve 'inkwell-playground.core 'make-sketch!))))
     (alter-var-root #'state (constantly (:state sketch)))))
 
 (defn stop! []
